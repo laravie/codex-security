@@ -9,6 +9,16 @@
             "email": "crynobone@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Laravie\\Codex\\Security\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Laravie\\Codex\\Security\\Tests\\": "tests/"
+        }
+    },
     "require": {
         "php": ">=7.1",
         "nesbot/carbon": "^1.26.3 || ^2.0"
