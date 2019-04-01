@@ -1,0 +1,21 @@
+{
+    "name": "laravie/codex-security",
+    "description": "Security Component for Laravie Codex",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "nesbot/carbon": "^1.26.3 || ^2.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.2",
+        "phpunit/phpunit": "^7.5 || ^8.0"
+    },
+    "minimum-stability": "dev"
+}
