@@ -1,8 +1,8 @@
 <?php
 
-namespace Laravie\Codex\Security\TimeLimitSignature;
+namespace Laravie\Codex\Security\Signature;
 
-class Create
+class Verify
 {
     /**
      * Signature secret.
@@ -19,11 +19,11 @@ class Create
     protected $hasher;
 
     /**
-     * Construct a new signature creator.
+     * Construct a new signature verifier.
      *
      * @param string  $secret
-     * @param int  $timestamp
      * @param string  $hasher
+     * @param int  $expiredIn
      */
     public function __construct(string $secret, string $hasher = 'sha256')
     {
@@ -32,19 +32,16 @@ class Create
     }
 
     /**
-     * Create signature.
+     * Verify signature.
      *
      * @param  string  $payload
-     * @param  int  $timestamp
-     * @return string
+     * @param  string  $signed
+     * @return bool
      */
-    public function __invoke(string $payload, int $timestamp): string
+    public function __invoke(string $payload, string $signed): bool
     {
-        $timestamp = (string) $timestamp;
-        $signature = \hash_hmac(
-            $this->hasher, "{$timestamp}.{$payload}", $this->secret
-        );
+        $expected = \hash_hmac($this->hasher, $payload, $this->secret);
 
-        return "t={$timestamp},v1={$signature}";
+        return \hash_equals($expected, $signed);
     }
 }

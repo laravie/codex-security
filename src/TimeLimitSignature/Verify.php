@@ -28,7 +28,7 @@ class Verify
     protected $expiredIn;
 
     /**
-     * Construct a new signature.
+     * Construct a new signature verifier.
      *
      * @param string  $secret
      * @param string  $hasher

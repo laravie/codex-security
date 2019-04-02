@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravie\Codex\Security\TimeLimitSignature;
+namespace Laravie\Codex\Security\Signature;
 
 class Create
 {
@@ -35,16 +35,10 @@ class Create
      * Create signature.
      *
      * @param  string  $payload
-     * @param  int  $timestamp
      * @return string
      */
-    public function __invoke(string $payload, int $timestamp): string
+    public function __invoke(string $payload): string
     {
-        $timestamp = (string) $timestamp;
-        $signature = \hash_hmac(
-            $this->hasher, "{$timestamp}.{$payload}", $this->secret
-        );
-
-        return "t={$timestamp},v1={$signature}";
+        return \hash_hmac($this->hasher, $payload, $this->secret);
     }
 }
