@@ -36,6 +36,7 @@ class Create
      *
      * @param  string  $payload
      * @param  int  $timestamp
+     *
      * @return string
      */
     public function __invoke(string $payload, int $timestamp): string

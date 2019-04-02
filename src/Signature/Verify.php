@@ -36,6 +36,7 @@ class Verify
      *
      * @param  string  $payload
      * @param  string  $signed
+     *
      * @return bool
      */
     public function __invoke(string $payload, string $signed): bool

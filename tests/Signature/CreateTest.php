@@ -2,7 +2,6 @@
 
 namespace Laravie\Codex\Security\Tests\Signature;
 
-use Carbon\Carbon;
 use PHPUnit\Framework\TestCase;
 use Laravie\Codex\Security\Signature\Create;
 

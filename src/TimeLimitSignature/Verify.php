@@ -47,6 +47,7 @@ class Verify
      * @param  string  $payload
      * @param  string  $signed
      * @param  int  $currentTimestamp
+     *
      * @return bool
      */
     public function __invoke(string $payload, string $signed, ?int $currentTimestamp = null): bool

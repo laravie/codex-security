@@ -35,6 +35,7 @@ class Create
      * Create signature.
      *
      * @param  string  $payload
+     *
      * @return string
      */
     public function __invoke(string $payload): string
