@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `laravie/codex-security`.
 
+## 1.0.1
+
+Released: 2019-04-05
+
+### Changes
+
+* Validate `$signed` on `Laravie\Codex\Security\TimeLimitSignature\Verify` using regular expression.
+
 ## 1.0.0
 
 Released: 2019-04-02
