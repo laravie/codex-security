@@ -52,9 +52,12 @@ class Verify
      */
     public function __invoke(string $payload, string $signed, ?int $currentTimestamp = null): bool
     {
-        $partials = \explode(',', $signed);
-        $timestamp = \explode('=', $partials[0])[1];
-        $signature = \explode('=', $partials[1])[1];
+        if (! \preg_match('/^t=(\d+),v1=([A-Za-z\d]+)/', $signed, $matches)) {
+            return false;
+        }
+
+        $timestamp = $matches[1];
+        $signature = $matches[2];
 
         $expected = \hash_hmac($this->hasher, "{$timestamp}.{$payload}", $this->secret);
 
