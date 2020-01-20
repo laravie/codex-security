@@ -5,6 +5,7 @@ php:
   - 7.2
   - 7.3
   - 7.4
+  - nightly
 
 env:
   global:
@@ -36,5 +37,6 @@ matrix:
     - php: 7.2
       env: setup=coveralls coverage=yes
   allow_failures:
+    - php: nightly
     - env: setup=coveralls coverage=yes
   fast_finish: true
