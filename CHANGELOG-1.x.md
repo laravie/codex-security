@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `laravie/codex-security`.
 
+## 1.1.0
+
+Release: 2020-02-02
+
+### Changes
+
+* Bump minimum PHP to 7.2+.
+
 ## 1.0.1
 
 Released: 2019-04-05
