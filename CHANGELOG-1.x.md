@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `laravie/codex-security`.
 
+## 1.1.1
+
+Released: 2020-11-08
+
+### Changes
+
+* Added support for PHP 8.
+
 ## 1.1.0
 
 Release: 2020-02-02
