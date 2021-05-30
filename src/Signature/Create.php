@@ -40,6 +40,6 @@ class Create
      */
     public function __invoke(string $payload): string
     {
-        return \hash_hmac($this->hasher, $payload, $this->secret);
+        return hash_hmac($this->hasher, $payload, $this->secret);
     }
 }

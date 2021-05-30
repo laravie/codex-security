@@ -42,7 +42,7 @@ class Create
     public function __invoke(string $payload, int $timestamp): string
     {
         $timestamp = (string) $timestamp;
-        $signature = \hash_hmac(
+        $signature = hash_hmac(
             $this->hasher, "{$timestamp}.{$payload}", $this->secret
         );
 

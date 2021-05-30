@@ -41,8 +41,8 @@ class Verify
      */
     public function __invoke(string $payload, string $signed): bool
     {
-        $expected = \hash_hmac($this->hasher, $payload, $this->secret);
+        $expected = hash_hmac($this->hasher, $payload, $this->secret);
 
-        return \hash_equals($expected, $signed);
+        return hash_equals($expected, $signed);
     }
 }
