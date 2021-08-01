@@ -23,7 +23,6 @@ class Verify
      *
      * @param string  $secret
      * @param string  $hasher
-     * @param int  $expiredIn
      */
     public function __construct(string $secret, string $hasher = 'sha256')
     {

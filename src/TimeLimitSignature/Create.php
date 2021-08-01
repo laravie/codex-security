@@ -22,7 +22,6 @@ class Create
      * Construct a new signature creator.
      *
      * @param string  $secret
-     * @param int  $timestamp
      * @param string  $hasher
      */
     public function __construct(string $secret, string $hasher = 'sha256')
