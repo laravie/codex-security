@@ -6,6 +6,6 @@ parameters:
     - src
 
   # The level 8 is the highest level
-  level: 5
+  level: 8
 
   treatPhpDocTypesAsCertain: false
