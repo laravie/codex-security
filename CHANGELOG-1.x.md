@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `laravie/codex-security`.
 
+## 1.1.2
+
+Released: 2021-08-01
+
+### Changes
+
+* Code styling changes.
+
 ## 1.1.1
 
 Released: 2020-11-08
