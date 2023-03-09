@@ -2,6 +2,18 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `laravie/codex-security`.
 
+## 1.2.0
+
+Released: 2023-03-09
+
+### Changes
+
+* Added support for PHP 8.2.
+
+### Removed
+
+* Remove support for PHP 7.2.
+
 ## 1.1.2
 
 Released: 2021-08-01
