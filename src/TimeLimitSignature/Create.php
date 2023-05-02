@@ -5,27 +5,12 @@ namespace Laravie\Codex\Security\TimeLimitSignature;
 class Create
 {
     /**
-     * Signature secret.
-     *
-     * @var string
-     */
-    protected $secret;
-
-    /**
-     * Hasher used.
-     *
-     * @var string
-     */
-    protected $hasher;
-
-    /**
      * Construct a new signature creator.
      */
-    public function __construct(string $secret, string $hasher = 'sha256')
-    {
-        $this->secret = $secret;
-        $this->hasher = $hasher;
-    }
+    public function __construct(
+        protected string $secret,
+        protected string $hasher = 'sha256'
+    ) { }
 
     /**
      * Create signature.

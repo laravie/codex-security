@@ -7,35 +7,13 @@ use Carbon\Carbon;
 class Verify
 {
     /**
-     * Signature secret.
-     *
-     * @var string
-     */
-    protected $secret;
-
-    /**
-     * Hasher used.
-     *
-     * @var string
-     */
-    protected $hasher;
-
-    /**
-     * Amount of seconds before signature is considered expired.
-     *
-     * @var int
-     */
-    protected $expiredIn;
-
-    /**
      * Construct a new signature verifier.
      */
-    public function __construct(string $secret, string $hasher = 'sha256', int $expiredIn = 300)
-    {
-        $this->secret = $secret;
-        $this->hasher = $hasher;
-        $this->expiredIn = $expiredIn;
-    }
+    public function __construct(
+        protected string $secret,
+        protected string $hasher = 'sha256',
+        protected int $expiredIn = 300
+    ) { }
 
     /**
      * Verify signature.
