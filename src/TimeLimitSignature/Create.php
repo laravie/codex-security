@@ -20,9 +20,6 @@ class Create
 
     /**
      * Construct a new signature creator.
-     *
-     * @param string  $secret
-     * @param string  $hasher
      */
     public function __construct(string $secret, string $hasher = 'sha256')
     {
@@ -32,11 +29,6 @@ class Create
 
     /**
      * Create signature.
-     *
-     * @param  string  $payload
-     * @param  int  $timestamp
-     *
-     * @return string
      */
     public function __invoke(string $payload, int $timestamp): string
     {

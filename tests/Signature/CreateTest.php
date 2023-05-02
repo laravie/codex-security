@@ -2,8 +2,8 @@
 
 namespace Laravie\Codex\Security\Tests\Signature;
 
-use PHPUnit\Framework\TestCase;
 use Laravie\Codex\Security\Signature\Create;
+use PHPUnit\Framework\TestCase;
 
 class CreateTest extends TestCase
 {

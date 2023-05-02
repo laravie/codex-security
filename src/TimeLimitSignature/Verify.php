@@ -29,10 +29,6 @@ class Verify
 
     /**
      * Construct a new signature verifier.
-     *
-     * @param string  $secret
-     * @param string  $hasher
-     * @param int  $expiredIn
      */
     public function __construct(string $secret, string $hasher = 'sha256', int $expiredIn = 300)
     {
@@ -44,11 +40,7 @@ class Verify
     /**
      * Verify signature.
      *
-     * @param  string  $payload
-     * @param  string  $signed
      * @param  int  $currentTimestamp
-     *
-     * @return bool
      */
     public function __invoke(string $payload, string $signed, ?int $currentTimestamp = null): bool
     {

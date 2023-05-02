@@ -3,8 +3,8 @@
 namespace Laravie\Codex\Security\Tests\TimeLimitSignature;
 
 use Carbon\Carbon;
-use PHPUnit\Framework\TestCase;
 use Laravie\Codex\Security\TimeLimitSignature\Create;
+use PHPUnit\Framework\TestCase;
 
 class CreateTest extends TestCase
 {

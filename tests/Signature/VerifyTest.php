@@ -3,8 +3,8 @@
 namespace Laravie\Codex\Security\Tests\Signature;
 
 use Carbon\Carbon;
-use PHPUnit\Framework\TestCase;
 use Laravie\Codex\Security\Signature\Verify;
+use PHPUnit\Framework\TestCase;
 
 class VerifyTest extends TestCase
 {
